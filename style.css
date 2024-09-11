@@ -1,0 +1,39 @@
+* {box-sizing:border-box; margin:0; padding:0; font-size:1.0em; color:#000; text-decoration:none;}
+header {display:flex; justify-content: space-between; padding:0 15px; align-items: center; height:60px; position:relative;}
+header a {text-transform: uppercase; font-weight:600; margin:0 5px;}
+header a img {}
+header h1 {width:150px; position:absolute; left:47.8%; transform:translateX(-50%);}
+header h1 img{width:250px; height: auto;}
+main .visual {
+    background:url(../images/visual.gif) center 6%;
+    height:350px; width:100%;
+}
+main h2 {text-align:center; padding:30px 0; text-transform: capitalize;}
+/* CSS수정 */
+/*
+CSS수정-수정내용작성
+1. margin: 0 auto로 수정하였습니다.
+2. img에 width 값을 100%주었습니다.
+*/
+main .link {max-width:1400px; margin:0 auto; display:flex;}
+main .link a img {width: 100%;} 
+
+/* CSS수정 */
+@media all and (max-width: 1400px){
+    header .left{display:none;}
+    header .right{display:none;}
+    main .link{padding:0 15px;}
+    /* 이미지크기 수정 - 세부조건1  */
+    header h1 img{width: 100%;}
+    /* 이미지크기 수정 - 세부조건2  */
+    main .visual {
+        background:url(../images/visual.gif) no-repeat center / cover;
+    }
+}
+/*
+CSS수정-수정내용작성
+3. max-width:1400px;에서 max-width:1400px으로 수정했습니다.
+4. media screen and (max-width:1400px;) -> media all and (max-width: 1400px)으로 수정해주었고
+"{"으로만 되있었던 것을 "}" 추가함으로써 시작과 끝을 표시해줬습니다.
+*/
+
